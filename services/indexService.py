@@ -14,3 +14,7 @@ def create_index(name: str):
         )
     )
 
+def list_index():
+    response = pc.list_indexes()
+    return response.to_dict()
+
