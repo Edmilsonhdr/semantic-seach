@@ -18,3 +18,7 @@ def list_index():
     response = pc.list_indexes()
     return response.to_dict()
 
+def detail_index(name: str):
+    response = pc.describe_index(name)
+    return response.to_dict()
+
