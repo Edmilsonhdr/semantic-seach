@@ -19,6 +19,6 @@ def list_index():
     return response.to_dict()
 
 def detail_index(name: str):
-    response = pc.describe_index(name)
+    response = pc.describe_index(name=name)
     return response.to_dict()
 
