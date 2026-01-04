@@ -1,0 +1,21 @@
+# Ambiente virtual
+env/
+venv/
+ENV/
+*.pyc
+__pycache__/
+
+# Arquivos de configuração sensíveis
+.env
+
+# Dependências e pacotes
+*.egg-info/
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Logs e arquivos temporários
+*.log
+*.tmp

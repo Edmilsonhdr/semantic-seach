@@ -1,0 +1,16 @@
+from .authenticationService import authenticate_pinecone
+from pinecone import ServerlessSpec
+
+pc = authenticate_pinecone()
+
+def create_index(name: str):
+    pc.create_index(
+        name=name,
+        dimension=1536,
+        metric="cosine",
+        spec=ServerlessSpec(
+            cloud="aws",
+            region="us-east-1"
+        )
+    )
+
