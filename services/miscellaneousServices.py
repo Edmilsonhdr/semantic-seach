@@ -14,3 +14,9 @@ def extract_text_from_pdf(filepdf: bytes):
     for page in readerPDF.pages:
         text += page.extract_text()
     return text
+
+def slip_text_into_chunks(text: str, chunk_size: 1000, overlap: 200) -> list:
+    chunks = []
+    for i in range(0, len(text), chunk_size - overlap):
+        chunks.append(text[i:i+chunk_size])
+    return chunks
